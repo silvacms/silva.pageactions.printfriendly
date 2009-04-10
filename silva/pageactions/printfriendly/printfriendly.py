@@ -3,7 +3,18 @@
 # See also LICENSE.txt
 # $Id$
 
+from silva.pageactions.base.base import PageAction
 from silva.core.views import views as silvaviews
 
+from five import grok
+
+
 class PrintFriendly(silvaviews.Template):
-    pass
+
+    grok.name('print.html')
+
+
+class PrintAction(PageAction):
+
+    grok.order(20)
+

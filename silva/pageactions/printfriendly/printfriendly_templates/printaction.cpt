@@ -1,0 +1,8 @@
+<tal:block
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   i18n:domain="pageactions">
+
+  <a href="${path:context/@@absolute_url}/@@print.html"
+     class="print-pageaction" i18n:translate="">Print</a>
+
+</tal:block>
