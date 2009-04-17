@@ -9,7 +9,7 @@ from silva.core.views import views as silvaviews
 from five import grok
 
 
-class PrintFriendly(silvaviews.Template):
+class PrintFriendly(silvaviews.View):
 
     grok.name('print.html')
 
