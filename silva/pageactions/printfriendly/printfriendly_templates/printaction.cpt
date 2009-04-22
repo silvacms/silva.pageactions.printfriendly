@@ -4,7 +4,7 @@
 
   <a href="${path:context/@@absolute_url}/@@print.html"
      class="print-pageaction"
-     title="Print"
+     title="Printable version"
      i18n:attributes="title"><span i18n:translate="">Print</span></a>
 
 </tal:block>
