@@ -3,6 +3,8 @@
    i18n:domain="pageactions">
 
   <a href="${path:context/@@absolute_url}/@@print.html"
-     class="print-pageaction"><span i18n:translate="">Print</span></a>
+     class="print-pageaction"
+     title="Print"
+     i18n:attributes="title"><span i18n:translate="">Print</span></a>
 
 </tal:block>
