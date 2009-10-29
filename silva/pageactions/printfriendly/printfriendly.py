@@ -5,13 +5,26 @@
 
 from silva.pageactions.base.base import PageAction
 from silva.core.views import views as silvaviews
+from silva.core.layout.interfaces import ISilvaLayer, ISilvaSkin
 
+from zope.publisher.browser import applySkin
 from five import grok
+
+
+class IPrintLayer(ISilvaLayer):
+    pass
+
+
+class IPrintSkin(IPrintLayer, ISilvaSkin):
+    pass
 
 
 class PrintFriendly(silvaviews.View):
 
     grok.name('print.html')
+
+    def update(self):
+        applySkin(self.request, IPrintSkin)
 
 
 class PrintAction(PageAction):
