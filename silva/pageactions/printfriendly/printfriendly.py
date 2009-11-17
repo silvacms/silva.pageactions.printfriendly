@@ -24,6 +24,10 @@ class PrintFriendly(silvaviews.View):
     grok.name('print.html')
 
     def update(self):
+        self.response.setHeader(
+            'Content-Type', 'text/html;charset=utf-8')
+        self.response.setHeader(
+            'Cache-Control','max-age=7200, must-revalidate')
         applySkin(self.request, IPrintSkin)
 
 
