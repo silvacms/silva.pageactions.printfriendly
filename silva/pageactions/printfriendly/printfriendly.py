@@ -3,12 +3,14 @@
 # See also LICENSE.txt
 # $Id$
 
-from silva.pageactions.base.base import PageAction
-from silva.core.views import views as silvaviews
 from silva.core.layout.interfaces import ISilvaLayer, ISilvaSkin
+from silva.core.views import views as silvaviews
+from silva.core.views.interfaces import IHTTPResponseHeaders
+from silva.pageactions.base.base import PageAction
 
-from zope.publisher.browser import applySkin
 from five import grok
+from zope import component
+from zope.publisher.browser import applySkin
 
 
 class IPrintLayer(ISilvaLayer):
@@ -24,10 +26,8 @@ class PrintFriendly(silvaviews.View):
     grok.name('print.html')
 
     def update(self):
-        self.response.setHeader(
-            'Content-Type', 'text/html;charset=utf-8')
-        self.response.setHeader(
-            'Cache-Control','max-age=7200, must-revalidate')
+        component.getMultiAdapter(
+            (self.context, self.request), IHTTPResponseHeaders)()
         applySkin(self.request, IPrintSkin)
 
 
