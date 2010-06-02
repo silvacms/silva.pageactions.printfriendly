@@ -24,7 +24,7 @@ setup(name='silva.pageactions.printfriendly',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'silva.core.views  > 2.0.999, < 2.1.999',
+          'silva.core.views',
           'silva.pageactions.base',
           'five.grok',
           'megrok.chameleon',
