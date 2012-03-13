@@ -23,10 +23,10 @@ setup(name='silva.pageactions.printfriendly',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'five.grok',
+          'grokcore.chameleon',
           'setuptools',
           'silva.core.views',
           'silva.pageactions.base',
-          'five.grok',
-          'megrok.chameleon',
           ],
       )
