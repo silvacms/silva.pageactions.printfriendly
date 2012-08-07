@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html i18n:domain="silva">
+  <head>
+    <title tal:content="content.get_title_or_id()"
+           tal:condition="content is not None">
+      Title
+    </title>
+    <meta name="generator" content="Silva" />
+    <tal:resource tal:replace="structure provider:resources" />
+  </head>
+  <body>
+    <tal:print tal:condition="view.html is not None"
+               tal:content="structure view.html">
+      Content
+    </tal:print>
+    <p tal:condition="view.html is None"
+       i18n:translate="">
+      Sorry, this content is not available at the moment.
+    </p>
+  </body>
+</html>
