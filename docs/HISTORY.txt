@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.2 (unreleased)
+------------------
+
+* Update template to include a doctype, xml namespace and encoding meta-type.
+
 1.0.1 (2009-11-20)
 ------------------
 
