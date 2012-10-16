@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.0.3 (unreleased)
+1.1 (unreleased)
 ------------------
 
-* ...
+* Update code to work with Silva 3.0.
 
 1.0.1 (2009-11-20)
 ------------------
