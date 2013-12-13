@@ -5,7 +5,7 @@ version = '1.1dev'
 
 setup(name='silva.pageactions.printfriendly',
       version=version,
-      description="Display a simple printable version of the content in Silva.",
+      description="Display a simple printable version of the content in Silva CMS",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
@@ -16,7 +16,7 @@ setup(name='silva.pageactions.printfriendly',
       keywords='silva pageactions print',
       author='Infrae',
       author_email='info@infrae.com',
-      url='',
+      url='https://github.com/silvacms/silva.pageactions.printfriendly',
       license='BSD',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['silva', 'silva.pageactions'],
